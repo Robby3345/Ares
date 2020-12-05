@@ -21,5 +21,6 @@ from django.conf.urls import url
 urlpatterns = [
     # path('admin/', admin.site.urls),
     url(r'^index/', views.index),
-    url(r'^login/', views.login),
+    url(r'^login_index/', views.login_index),
+    url(r'^submit/', views.login),
 ]

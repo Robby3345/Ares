@@ -11,6 +11,46 @@ def login_index(request):
     return render(request, "login.html")
 
 
+def flot(request):
+    return render(request, "flot.html")
+
+
+def morris(request):
+    return render(request, "morris.html")
+
+
+def tables(request):
+    return render(request, "tables.html")
+
+
+def forms(request):
+    return render(request, "forms.html")
+
+
+def panels(request):
+    return render(request, "panels-wells.html")
+
+
+def buttons(request):
+    return render(request, "buttons.html")
+
+
+def notifications(request):
+    return render(request, "notifications.html")
+
+
+def typography(request):
+    return render(request, "typography.html")
+
+
+def icons(request):
+    return render(request, "icons.html")
+
+
+def grid(request):
+    return render(request, "grid.html")
+
+
 def login(request):
     mail = request.POST['email']
     password = request.POST['password']

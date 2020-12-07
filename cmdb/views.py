@@ -69,11 +69,13 @@ def login(request):
 
 
 def get_machine_list(request):
-
-    html_str = ''
-    sql = 'select id,hostname,inner_ip,outer_ip,cpu,memory,disk,network,bandwidth,area,os,product_flag,start_time,end_time from info where isdelete=0'
-    conn = sqlhelper.SqlHelper('cmdb')
-    data = conn.get_list(sql)
-    conn.close()
-    content = {'tablelist': data}
-    return render(request, "tables.html", content)
+    try:
+        html_str = ''
+        sql = 'select id,hostname,inner_ip,outer_ip,cpu,memory,disk,network,bandwidth,area,os,product_flag,start_time,end_time from info where isdelete=0'
+        conn = sqlhelper.SqlHelper('cmdb')
+        data = conn.get_list(sql)
+        conn.close()
+        content = {'tablelist': data}
+        return render(request, "tables.html", content)
+    except Exception as e:
+        print(e)

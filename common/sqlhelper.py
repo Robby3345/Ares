@@ -7,7 +7,7 @@ class SqlHelper(object):
         self.connect()
 
     def connect(self):
-        self.conn = pymysql.connect(host='localhost', user='root', password='12345678', port=3306, database=self.db,
+        self.conn = pymysql.connect(host='192.168.10.243', user='root', password='12345678', port=3306, database=self.db,
                                     charset='utf8')
         self.cursor = self.conn.cursor(cursor=pymysql.cursors.DictCursor)
 

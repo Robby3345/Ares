@@ -25,7 +25,7 @@ urlpatterns = [
     url(r'^submit/', views.login),
     url(r'^flot/', views.flot),
     url(r'^morris/', views.morris),
-    url(r'^tables/', views.tables),
+    url(r'^tables/', views.get_machine_list),
     url(r'^forms/', views.forms),
     url(r'^panels/', views.panels),
     url(r'^buttons/', views.buttons),

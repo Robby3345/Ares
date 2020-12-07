@@ -402,6 +402,7 @@
                                id="dataTables-example">
                             <thead>
                             <tr>
+                                <th></th>
                                 <th>id</th>
                                 <th>hostname</th>
                                 <th>inner_ip</th>
@@ -421,6 +422,7 @@
                             <tbody>
                             {% for list in tablelist %}
                                 <tr class="odd gradeX">
+                                    <td><input type="checkbox"></td>
                                     <td>{{ list.id }}</td>
                                     <td>{{ list.hostname }}</td>
                                     <td>{{ list.inner_ip }}</td>

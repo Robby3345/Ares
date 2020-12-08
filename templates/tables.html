@@ -64,7 +64,7 @@
     function add_info()
     {
         var form_data = $("#form_data").serialize();
-        alert(form_data);
+        return form_data;
     }
 </script>
 
@@ -481,6 +481,43 @@
     <!-- /#page-wrapper -->
 </div>
 <!-- /#wrapper -->
+<!-- 资产信息提交 -->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    资产信息
+                </h4>
+            </div>
+
+            <form id="form_data">
+                <div class="modal-body">
+                    hostname: <input type="text" id="hostname" name="hostname"/></br>
+                    inner_ip: <input type="text" id="inner_ip" name="inner_ip"/></br>
+                    outer_ip: <input type="text" id="outer_ip" name="outer_ip"/></br>
+                    cpu: <input type="text" id="cpu" name="cpu"/></br>
+                    memory: <input type="text" id="memory" name="memory"/></br>
+                    network: <input type="text" id="network" name="network"/></br>
+                    bandwidth: <input type="text" id="bandwidth" name="bandwidth"/></br>
+                    area: <input type="text" id="area" name="area"/></br>
+                    os: <input type="text" id="os" name="os"/></br>
+                    product_flag: <input type="text" id="product_flag" name="product_flag"/></br>
+                    start_time: <input type="text" id="start_time" name="start_time"/></br>
+                    end_time: <input type="text" id="end_time" name="end_time"/></br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" onclick="add_info()" class="btn btn-primary">提交更改</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 <!-- jQuery -->
 <script src="../static/vendor/jquery/jquery.min.js"></script>

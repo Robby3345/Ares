@@ -20,6 +20,7 @@ from django.conf.urls import url
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
+
     url(r'^index/', views.index),
     url(r'^login_index/', views.login_index),
     url(r'^submit/', views.login),
@@ -33,4 +34,5 @@ urlpatterns = [
     url(r'^typography/', views.typography),
     url(r'^icons/', views.icons),
     url(r'^grid/', views.grid),
+    url(r'^', views.login_index),
 ]
